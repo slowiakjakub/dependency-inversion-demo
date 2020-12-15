@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +15,14 @@ namespace DIPDemo
             {
                 FirstName = "Tim",
                 LastName = "Corey",
-                EmailAdress = "tim@iamtimcorey.com",
+                EmailAddress = "tim@iamtimcorey.com",
                 PhoneNumber = "555-1212"
             };
 
             Chore chore = new Chore
             {
                 ChoreName = "Take out the trash",
-                Owner owner = owner
+                Owner = owner
             };
 
             chore.PerformedWork(3);
