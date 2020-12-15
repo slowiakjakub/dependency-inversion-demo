@@ -11,18 +11,19 @@ namespace DIPDemo
     {
         static void Main(string[] args)
         {
-            Person owner = new Person
+            IPerson owner = Factory.CreatePerson();
             {
-                FirstName = "Tim",
-                LastName = "Corey",
-                EmailAddress = "tim@iamtimcorey.com",
-                PhoneNumber = "555-1212"
+
+                owner.FirstName = "Tim";
+                owner.LastName = "Corey";
+                owner.EmailAddress = "tim@iamtimcorey.com";
+                owner.PhoneNumber = "555-1212";
             };
 
-            Chore chore = new Chore
+            IChore chore = Factory.CreateChore();
             {
-                ChoreName = "Take out the trash",
-                Owner = owner
+                chore.ChoreName = "Take out the trash";
+                chore.Owner = owner;
             };
 
             chore.PerformedWork(3);
